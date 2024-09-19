@@ -10,7 +10,6 @@ private String colorEyes;
 private boolean mustache;
 private String colorNose;
 private static int counter=0;
-private int miles=0;
 /*************************************************************************/ 
 
 //constructors 
@@ -125,8 +124,8 @@ public static String favoriteColor(){
         return("yellow");
     }
 }
-public void run(){
-    miles = (int)(100*Math.random());
+public void run(int miles){
+
     System.out.println("I am running " + miles + " miles per hour");
 }
 /*****************************************************/
@@ -166,6 +165,6 @@ jim.talk();
 String favoriteColor = PotatoHead.favoriteColor();
 System.out.println("my favorite color is " +  favoriteColor);
 
-bob.run();
+bob.run(100);
 } 
 }
