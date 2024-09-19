@@ -10,6 +10,7 @@ private String colorEyes;
 private boolean mustache;
 private String colorNose;
 private static int counter=0;
+private int miles=0;
 /*************************************************************************/ 
 
 //constructors 
@@ -110,19 +111,23 @@ public void setColorNose(String nose)
 //Other methods 
 
 public void talk(){
-    System.out.println(“Superb”);
+    System.out.println("Superb");
     }
    
-public static favoriteColor(){
+public static String favoriteColor(){
     counter = (int)(3*Math.random());
     if (counter==0){
-        System.out.println("red");
+        return("red");
     }else if(counter==1){
-        System.out.println("blue");
+        return("blue");
 
-    }else if(counter==2){
-        System.out.println("yellow");
+    }else{
+        return("yellow");
     }
+}
+public void run(){
+    miles = (int)(100*Math.random());
+    System.out.println("I am running " + miles + " miles per hour");
 }
 /*****************************************************/
 
@@ -139,7 +144,6 @@ PotatoHead bob = new PotatoHead(2,"pink",true,"blue","blue",true,"red");
 
 
 
-String i = bob.getColorEars();
 
 jim.setAmntArms(1);
 jim.setColorEars("black");
@@ -159,7 +163,9 @@ System.out.println(text + "\n" + text2);
 //call or access (test) all of the methods
 
 jim.talk();
+String favoriteColor = PotatoHead.favoriteColor();
+System.out.println("my favorite color is " +  favoriteColor);
 
-
+bob.run();
 } 
 }
