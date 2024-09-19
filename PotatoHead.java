@@ -9,6 +9,7 @@ private String colorShoes;
 private String colorEyes;
 private boolean mustache;
 private String colorNose;
+private static int counter=0;
 /*************************************************************************/ 
 
 //constructors 
@@ -16,6 +17,7 @@ private String colorNose;
 public PotatoHead() 
 { 
 
+    
 amntArms = 2;
 colorEars = "pink";
 hat = true;
@@ -106,6 +108,22 @@ public void setColorNose(String nose)
 /********************************************************************/ 
 
 //Other methods 
+
+public void talk(){
+    System.out.println(“Superb”);
+    }
+   
+public static favoriteColor(){
+    counter = (int)(3*Math.random());
+    if (counter==0){
+        System.out.println("red");
+    }else if(counter==1){
+        System.out.println("blue");
+
+    }else if(counter==2){
+        System.out.println("yellow");
+    }
+}
 /*****************************************************/
 
 
@@ -134,11 +152,13 @@ jim.setMustache(true);
 String text = jim.toString();
 String text2 = bob.toString();
 
+
 System.out.println(text + "\n" + text2);
 //create objects or instances
 //call or access constructors
 //call or access (test) all of the methods
 
+jim.talk();
 
 
 } 
